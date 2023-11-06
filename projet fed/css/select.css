@@ -1,0 +1,96 @@
+.sort {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: end;
+    align-items: start;
+}
+
+.srticon {
+    grid-column: 2/3;
+}
+
+.select {
+    margin-left: 70px;
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 250px;
+    height: 40px;
+    float: right;
+    margin-right: 10px;
+    color: #00a082;
+}
+
+.select:hover {
+    cursor: pointer;
+}
+
+.option {
+    border-radius: 16px;
+    padding: 0 30px 0 10px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    pointer-events: none;
+    order: 2;
+    transition: background .4s ease-in-out;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.option:hover {
+    background: #00a082;
+    color: #fff;
+    border-radius: 15px;
+}
+
+.select:focus .option {
+    position: relative;
+    pointer-events: all;
+    border-radius: 15px;
+}
+
+.sort .select input {
+    opacity: 0;
+    position: absolute;
+    left: -99999px;
+}
+
+.sort .select input:checked+label {
+    order: 1;
+    z-index: 2;
+    background: #fff;
+    border-top: none;
+    position: relative;
+    color: #00a082;
+    border-radius: 15px;
+}
+
+.sort .select input:checked+label:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #00a082;
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 2.5px);
+    pointer-events: none;
+    z-index: 3;
+}
+
+.sort .select input:checked+label:before {
+    position: absolute;
+    right: 0;
+    height: 40px;
+    width: 40px;
+    content: '';
+    background: #fff;
+}

@@ -1,0 +1,65 @@
+.page section .navsidebar .title {
+    display: flex;
+    flex-direction: row;
+    color: #00a082;
+    padding: 10px;
+}
+
+.page section .navsidebar h4 {
+    padding-left: 10px;
+}
+
+.page section .navsidebar button {
+    border: 0;
+    background-color: transparent;
+    margin: 5px;
+    color: grey;
+}
+
+section .card .content .meal-img,
+.meal-img1 {
+    z-index: 8;
+    transform-origin: 0 0;
+    transition: transform .25s, visibility .25s ease-in;
+}
+
+section .card .content .meal-img:hover,
+.meal-img1:hover {
+    transform: scale(3);
+}
+
+
+/*form------*/
+
+.wrapper {
+    margin-top: 10px;
+    height: 30px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #ffc244;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.wrapper span {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.wrapper span.num {
+    font-size: 15px;
+    padding: 2px;
+    border-right: 2px solid rgba(0, 0, 0, 0.2);
+    border-left: 2px solid rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+}
+
+.navsidebar #btnmargin {
+    margin-left: 60px;
+    text-align: justify;
+}

@@ -1,0 +1,15 @@
+.page section .bar .notification .star {
+    grid-column: 1/2;
+}
+
+.page section .bar .notification .chat {
+    grid-column: 2/3;
+}
+
+.page section .bar .notification .notif {
+    grid-column: 3/4;
+}
+
+.page section .bar .notification .profile {
+    grid-column: 4/5;
+}
